@@ -1,5 +1,9 @@
+Given /^there is a post with title "(.*?)" and content "(.*?)"$/ do |title, content|
+	@post_select = Post.create!({ :title => title, :content => content, :post_time => Time.now})
+end
+
 When /^I edit this post$/ do
-	click_on "Edit"
+	click_link "Edit", :href => "/posts/#{@post_select.id}/edit"
 end
 
 When /^I update title to "(.*?)" and content to "(.*?)"$/ do |title, content|

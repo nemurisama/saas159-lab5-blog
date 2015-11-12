@@ -8,6 +8,3 @@ And /^there are already (\d) posts$/ do |count|
 	end
 end
 
-And /^there is a post with title "(.*?)" and content "(.*?)"$/ do |title, content|
-	Post.create!({ :title => title, :content => content, :post_time => Time.now})
-end
