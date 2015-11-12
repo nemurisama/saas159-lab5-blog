@@ -24,7 +24,7 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'rspec-rails'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', :require => false
 	gem 'capybara'
 	gem 'launchy'
 	gem 'database_cleaner'
